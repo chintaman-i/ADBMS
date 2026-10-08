@@ -54,6 +54,17 @@ ALTER TABLE emp3 DROP CHECK emp3_chk_1;
 INSERT INTO emp3 VALUES(104,'sam','smith',500);
 
 
+create table emp5(EmpId int PRIMARY KEY,fname varchar(20),lname varchar(30),Age int,salary int);
+
+INSERT INTO emp5 VALUES(101,'ram','kumar',30,50001);
+TRUNCATE emp5;
+
+ALTER TABLE emp5 add CONSTRAINT CHECK(Age>20 and salary >=5000);
+
+SELECT * FROM emp5;
+
+
+
 
 
 
