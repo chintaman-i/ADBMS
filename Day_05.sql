@@ -107,6 +107,10 @@ SELECT * FROM customer;
 
 SELECT SUBSTR(custname,1,2),instr(custname,'a') FROM customer;
 
+SELECT SUBSTR(custname,1,3),instr(custname,'a') FROM customer WHERE custid <105;
+
+
+
 
 
 
