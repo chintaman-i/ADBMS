@@ -64,6 +64,32 @@ ALTER TABLE emp5 add CONSTRAINT CHECK(Age>20 and salary >=5000);
 SELECT * FROM emp5;
 
 
+--day 3
+
+SHOW DATABASES;
+USE company_db;
+create table emp6(EmpId int,fname varchar(20),lname varchar(30),EmpAge int,empdept varchar(20) default 'oprations');
+SHOW TABLES;
+INSERT into emp6 VALUES(1,'A','B');-- this will not work due to single ine INSERT
+INSERT into emp6(EmpId,fname,lname) VALUES(1,'A','B');
+CREATE INDEX demoindex on emp6(fname);
+SHOW INDEXES FROM emp6;
+CREATE INDEX demoindex2 on emp6(fname,lname);
+SHOW INDEXES FROM emp6;
+DROP INDEX demoindex on emp6;
+DROP INDEX demoindex2 on emp6;
+CREATE TABLE person1 (
+    pId INT NOT NULL AUTO_INCREMENT,
+    nfname VARCHAR(20)
+    lname VARCHAR(30),
+    Age INT,
+    PRIMARY KEY (pId)
+); 
+insert into person1(nfname,lname,Age) VALUES('sam','smith',35);
+SELECT * from emp6;
+
+
+
 
 
 
