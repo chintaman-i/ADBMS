@@ -49,7 +49,63 @@ SELECT * FROM customer ORDER BY City,Price;
 SELECT * FROM customer ORDER BY Price,City;
 
 
+SELECT * FROM customer ORDER BY City DESC,Price asc;
 
+/* Case conversion*/
+
+SELECT UPPER(custname),lower(product) from customer
+WHERE custid <103;
+
+ALTER TABLE customer ADD COLUMN lname VARCHAR(20);
+
+UPDATE customer
+SET lname = 'joshi' 
+WHERE custid = 101;
+
+UPDATE customer
+SET lname = 'joshi' 
+WHERE custid = 102;
+
+UPDATE customer
+SET lname = 'gadre' 
+WHERE custid = 103;
+
+UPDATE customer
+SET lname = 'katkar' 
+WHERE custid = 104;
+
+UPDATE customer
+SET lname = 'zirpe' 
+WHERE custid = 105;
+
+
+SELECT * FROM customer;
+
+/*Concate two columns*/
+
+SELECT CONCAT(custname,' ' ,lname) FROM customer;
+
+SELECT CONCAT(custname,' ' ,lname) as FullName FROM customer;
+
+/*use of substr and instr functions*/
+
+SELECT * FROM customer;
+
+SELECT SUBSTR(custname,1,3) FROM customer;
+
+SELECT SUBSTR(custname,0,3) FROM customer;
+
+SELECT SUBSTR(custname,1,0) FROM customer;
+
+/*Pos of  the seleted value*/
+SELECT INSTR(custname,'a') from customer;
+
+SELECT INSTR(custname,'a') as position from customer;
+
+SELECT * FROM customer;
+
+
+SELECT SUBSTR(custname,1,2),instr(custname,'a') FROM customer;
 
 
 
