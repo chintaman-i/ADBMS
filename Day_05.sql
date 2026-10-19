@@ -110,6 +110,31 @@ SELECT SUBSTR(custname,1,2),instr(custname,'a') FROM customer;
 SELECT SUBSTR(custname,1,3),instr(custname,'a') FROM customer WHERE custid <105;
 
 
+/*date*/
+show DATABASES;
+use user;
+
+SELECT now()as current_datetime;
+
+alter TABLE customer ADD COLUMN Date date;
+
+desc customer;
+
+
+UPDATE customer SET date='2005/01/12' WHERE custid=101;
+
+UPDATE customer SET date='2005/11/12' WHERE custid=102;
+UPDATE customer SET date='2005/10/12' WHERE custid=103;
+UPDATE customer SET date='2005/04/12' WHERE custid=104;
+UPDATE customer SET date='2005-10-11' WHERE custid=105;
+UPDATE customer SET date='2005/10/12' WHERE custid=103;
+
+
+
+
+SELECT*from customer;
+
+
 
 
 
